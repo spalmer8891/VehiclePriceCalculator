@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePriceCalculator.WebApp", "VehiclePriceCalculator.WebApp\VehiclePriceCalculator.WebApp.csproj", "{308884BD-75D4-44A4-9294-42D8E06ACCF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePriceCalculator.Application", "VehiclePriceCalculator.Application\VehiclePriceCalculator.Application.csproj", "{545A2BE0-3F18-4C5D-8C84-3D30A906C77B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePriceCalculator.Domain", "VehiclePriceCalculator.Domain\VehiclePriceCalculator.Domain.csproj", "{356BE904-2CB8-4FF4-B87E-8B53F4B57C74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePriceCalculator.Infrastructure", "VehiclePriceCalculator.Infrastructure\VehiclePriceCalculator.Infrastructure.csproj", "{3DAC11FF-ED89-4EEA-B6DC-4C6D174F61FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePriceCalculator.API", "VehiclePriceCalculator.API\VehiclePriceCalculator.API.csproj", "{099CA182-51C1-4B72-AEA7-28154FF40B6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePriceCalculator.UnitTest", "VehiclePriceCalculator.UnitTest\VehiclePriceCalculator.UnitTest.csproj", "{58B1F392-3019-47BD-8268-526CF0E5E1FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{297784CE-2DCF-46FB-B929-B063A4A30D33}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{308884BD-75D4-44A4-9294-42D8E06ACCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{308884BD-75D4-44A4-9294-42D8E06ACCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{308884BD-75D4-44A4-9294-42D8E06ACCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{308884BD-75D4-44A4-9294-42D8E06ACCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545A2BE0-3F18-4C5D-8C84-3D30A906C77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545A2BE0-3F18-4C5D-8C84-3D30A906C77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545A2BE0-3F18-4C5D-8C84-3D30A906C77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545A2BE0-3F18-4C5D-8C84-3D30A906C77B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356BE904-2CB8-4FF4-B87E-8B53F4B57C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356BE904-2CB8-4FF4-B87E-8B53F4B57C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356BE904-2CB8-4FF4-B87E-8B53F4B57C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356BE904-2CB8-4FF4-B87E-8B53F4B57C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAC11FF-ED89-4EEA-B6DC-4C6D174F61FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAC11FF-ED89-4EEA-B6DC-4C6D174F61FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAC11FF-ED89-4EEA-B6DC-4C6D174F61FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAC11FF-ED89-4EEA-B6DC-4C6D174F61FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{099CA182-51C1-4B72-AEA7-28154FF40B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099CA182-51C1-4B72-AEA7-28154FF40B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099CA182-51C1-4B72-AEA7-28154FF40B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099CA182-51C1-4B72-AEA7-28154FF40B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B1F392-3019-47BD-8268-526CF0E5E1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B1F392-3019-47BD-8268-526CF0E5E1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B1F392-3019-47BD-8268-526CF0E5E1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B1F392-3019-47BD-8268-526CF0E5E1FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5829F3D7-D3DD-4232-AE30-2A7E69DDC259}
+	EndGlobalSection
+EndGlobal

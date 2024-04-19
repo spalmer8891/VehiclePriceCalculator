@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NsN/Wjru8dEnoY4bi+QBEVcr1TfkFak/l9TDpVjnlBg=",
+  "Source": "VehiclePriceCalculator.API",
+  "BasePath": "_content/VehiclePriceCalculator.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
