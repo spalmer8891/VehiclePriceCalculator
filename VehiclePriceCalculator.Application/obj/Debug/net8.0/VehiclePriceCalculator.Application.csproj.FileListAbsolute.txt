@@ -43,3 +43,4 @@ C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Applica
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Application\obj\Debug\net8.0\refint\VehiclePriceCalculator.Application.dll
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Application\obj\Debug\net8.0\VehiclePriceCalculator.Application.pdb
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Application\obj\Debug\net8.0\ref\VehiclePriceCalculator.Application.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Application\obj\Debug\net8.0\VehiclePriceCalculator.Application.sourcelink.json

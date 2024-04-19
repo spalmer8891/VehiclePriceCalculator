@@ -42,3 +42,4 @@ C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Domain\
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Domain\obj\Debug\net8.0\refint\VehiclePriceCalculator.Domain.dll
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Domain\obj\Debug\net8.0\VehiclePriceCalculator.Domain.pdb
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Domain\obj\Debug\net8.0\ref\VehiclePriceCalculator.Domain.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Domain\obj\Debug\net8.0\VehiclePriceCalculator.Domain.sourcelink.json

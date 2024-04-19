@@ -66,3 +66,4 @@ C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Infrast
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Infrastructure\obj\Debug\net8.0\VehiclePriceCalculator.Infrastructure.pdb
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Infrastructure\obj\Debug\net8.0\VehiclePriceCalculator.Infrastructure.genruntimeconfig.cache
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Infrastructure\obj\Debug\net8.0\ref\VehiclePriceCalculator.Infrastructure.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.Infrastructure\obj\Debug\net8.0\VehiclePriceCalculator.Infrastructure.sourcelink.json

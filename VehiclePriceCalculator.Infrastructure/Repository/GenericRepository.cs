@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using VehiclePriceCalculator.Domain.Entities;
 using VehiclePriceCalculator.Infrastructure.Interfaces;
 using VehiclePriceCalculator.Domain.Interfaces.Repositories;
+using VehiclePriceCalculator.Domain.Interfaces;
 
 namespace VehiclePriceCalculator.Infrastructure.Repository
 {
@@ -15,21 +16,42 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
 
         private readonly DbContext _dbContext;
         private readonly DbSet<T> _db;
+        protected readonly IAppLogger<T> _logger;
 
-        public GenericRepository(DbContext dbContext)
+        public GenericRepository(DbContext dbContext,IAppLogger<T> logger)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _db = _dbContext.Set<T>();
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
         {
-            return await _db.ToListAsync();
+            List<T> data = new List<T>();
+
+            try
+            {
+                data = await _db.ToListAsync(); //retrieve data and convert to list
+
+            }catch (Exception ex)
+            {
+                _logger.LogError($"An error occurred in the {nameof(GetAllAsync)} method: {ex}");
+            }
+
+            return data;
         }
 
         public async Task<T> AddAsync(T entity)
         {
-            _dbContext.Set<T>().Add(entity);
+            try
+            {
+                _dbContext.Set<T>().Add(entity);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError($"An error occurred in the {nameof(AddAsync)} method: {ex}");
+            }
+           
             return entity;
         }
 
