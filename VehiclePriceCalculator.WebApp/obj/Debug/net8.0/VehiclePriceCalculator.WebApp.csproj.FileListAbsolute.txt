@@ -224,3 +224,11 @@ C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\obj\Debug\net8.0\VehiclePriceCalculator.WebApp.pdb
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\obj\Debug\net8.0\VehiclePriceCalculator.WebApp.genruntimeconfig.cache
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\obj\Debug\net8.0\ref\VehiclePriceCalculator.WebApp.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\obj\Debug\net8.0\VehiclePriceCalculator.WebApp.sourcelink.json
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Extensions.Logging.File.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Sinks.Async.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Sinks.RollingFile.dll

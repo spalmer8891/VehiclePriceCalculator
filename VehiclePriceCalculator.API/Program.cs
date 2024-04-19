@@ -50,7 +50,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Add Presentation Layer
 builder.Services.AddScoped<IAPIService, APIService>();
-builder.Services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(APIMappin---------------------------------------------------------gProfile));
+builder.Services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(APIMappingProfile));
 
 // Add MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetAllVehicleTypesQuery>());

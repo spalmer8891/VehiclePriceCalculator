@@ -6,6 +6,8 @@ using VehiclePriceCalculator.WebApp.ViewModels;
 using VehiclePriceCalculator.Infrastructure.Constants;
 using VehiclePriceCalculator.Domain.Entities;
 using Microsoft.VisualBasic;
+using VehiclePriceCalculator.WebApp.Pages;
+using VehiclePriceCalculator.Application.Models;
 
 namespace VehiclePriceCalculator.WebApp.Services
 {
@@ -14,17 +16,30 @@ namespace VehiclePriceCalculator.WebApp.Services
         private readonly IVehicleTypeService _vehicleTypeAppService;
         private readonly IVehiclePriceTransactionService _vehiclePriceTransactionAppService;
         private readonly IMapper _mapper;
-        public IndexPageService(IVehicleTypeService vehicleTypeAppService,IVehiclePriceTransactionService vehiclePriceTransactionAppService, IMapper mapper)
+        private readonly ILogger<IndexPageService> _logger;
+        public IndexPageService(IVehicleTypeService vehicleTypeAppService,IVehiclePriceTransactionService vehiclePriceTransactionAppService, IMapper mapper, ILogger<IndexPageService> logger)
         {
             _vehicleTypeAppService = vehicleTypeAppService ?? throw new ArgumentNullException(nameof(vehicleTypeAppService));
             _vehiclePriceTransactionAppService = vehiclePriceTransactionAppService ?? throw new ArgumentNullException(nameof(vehiclePriceTransactionAppService));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger)); ;
         }
 
         public async Task<IEnumerable<VehicleTypeViewModel>> GetAllVehicleTypes()
         {
-            var list = await _vehicleTypeAppService.GetVehicleTypeNameList();
-            var mapped = _mapper.Map<IEnumerable<VehicleTypeViewModel>>(list);
+            IEnumerable<VehicleTypeModel> list = Enumerable.Empty<VehicleTypeModel>();
+            IEnumerable<VehicleTypeViewModel> mapped = Enumerable.Empty<VehicleTypeViewModel>();
+
+            try
+            {
+                list = await _vehicleTypeAppService.GetVehicleTypeNameList();
+                mapped = _mapper.Map<IEnumerable<VehicleTypeViewModel>>(list);
+               
+            }catch(Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred in the {MethodName} method", nameof(GetAllVehicleTypes));
+            }
+
             return mapped;
         }
 

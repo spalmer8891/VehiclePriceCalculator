@@ -22,6 +22,7 @@ using VehiclePriceCalculator.Application.CQRS.Commands;
 using VehiclePriceCalculator.WebApp.AutoMapperProfile;
 using VehiclePriceCalculator.Domain.Interfaces;
 using VehiclePriceCalculator.Domain.Services;
+using VehiclePriceCalculator.Infrastructure.Logging;
 
 namespace VehiclePriceCalculator.WebApp
 {
@@ -93,6 +94,9 @@ namespace VehiclePriceCalculator.WebApp
             // Add MediatR
             //services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetAllVehicleTypesQuery>());
+
+            //Logger
+            services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 
         }
     }
