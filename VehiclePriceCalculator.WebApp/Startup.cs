@@ -13,16 +13,17 @@ using VehiclePriceCalculator.Domain.Entities;
 using VehiclePriceCalculator.Application.Interfaces;
 using VehiclePriceCalculator.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
-using VehiclePriceCalculator.WebApp.Interfaces;
-using VehiclePriceCalculator.WebApp.Services;
+using VehiclePriceCalculator.Shared.Interfaces;
+using VehiclePriceCalculator.Shared.Services;
 using System.Reflection;
 using VehiclePriceCalculator.Application.CQRS.Queries;
 using MediatR;
 using VehiclePriceCalculator.Application.CQRS.Commands;
-using VehiclePriceCalculator.WebApp.AutoMapperProfile;
+using VehiclePriceCalculator.Shared.AutoMapperProfile;
 using VehiclePriceCalculator.Domain.Interfaces;
 using VehiclePriceCalculator.Domain.Services;
 using VehiclePriceCalculator.Infrastructure.Logging;
+
 
 namespace VehiclePriceCalculator.WebApp
 {
@@ -88,8 +89,10 @@ namespace VehiclePriceCalculator.WebApp
                     );
 
             // Add Presentation Layer
-            services.AddScoped<IIndexPageService, IndexPageService>();
-            services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(WebAppMappingProfile));
+            services.AddScoped<IPresentationService, PresentationService>();
+            services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(PresentationMappingProfile));
+            //services.AddScoped<IIndexPageService, IndexPageService>();
+            //services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(WebAppMappingProfile));
 
             // Add MediatR
             //services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));

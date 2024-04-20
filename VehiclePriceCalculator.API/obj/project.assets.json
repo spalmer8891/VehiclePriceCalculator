@@ -1463,6 +1463,20 @@
         "runtime": {
           "bin/placeholder/VehiclePriceCalculator.Infrastructure.dll": {}
         }
+      },
+      "VehiclePriceCalculator.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VehiclePriceCalculator.Application": "1.0.0",
+          "VehiclePriceCalculator.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehiclePriceCalculator.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehiclePriceCalculator.Shared.dll": {}
+        }
       }
     }
   },
@@ -4426,6 +4440,11 @@
       "type": "project",
       "path": "../VehiclePriceCalculator.Infrastructure/VehiclePriceCalculator.Infrastructure.csproj",
       "msbuildProject": "../VehiclePriceCalculator.Infrastructure/VehiclePriceCalculator.Infrastructure.csproj"
+    },
+    "VehiclePriceCalculator.Shared/1.0.0": {
+      "type": "project",
+      "path": "../VehiclePriceCalculator.Shared/VehiclePriceCalculator.Shared.csproj",
+      "msbuildProject": "../VehiclePriceCalculator.Shared/VehiclePriceCalculator.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4434,7 +4453,8 @@
       "MediatR >= 12.2.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "VehiclePriceCalculator.Application >= 1.0.0",
-      "VehiclePriceCalculator.Infrastructure >= 1.0.0"
+      "VehiclePriceCalculator.Infrastructure >= 1.0.0",
+      "VehiclePriceCalculator.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4469,6 +4489,9 @@
             },
             "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj"
+            },
+            "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj": {
+              "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj"
             }
           }
         }

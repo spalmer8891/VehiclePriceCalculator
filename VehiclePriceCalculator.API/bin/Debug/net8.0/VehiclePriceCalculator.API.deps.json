@@ -12,7 +12,8 @@
           "MediatR": "12.2.0",
           "Swashbuckle.AspNetCore": "6.4.0",
           "VehiclePriceCalculator.Application": "1.0.0",
-          "VehiclePriceCalculator.Infrastructure": "1.0.0"
+          "VehiclePriceCalculator.Infrastructure": "1.0.0",
+          "VehiclePriceCalculator.Shared": "1.0.0"
         },
         "runtime": {
           "VehiclePriceCalculator.API.dll": {}
@@ -795,6 +796,15 @@
         "runtime": {
           "VehiclePriceCalculator.Infrastructure.dll": {}
         }
+      },
+      "VehiclePriceCalculator.Shared/1.0.0": {
+        "dependencies": {
+          "VehiclePriceCalculator.Application": "1.0.0",
+          "VehiclePriceCalculator.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "VehiclePriceCalculator.Shared.dll": {}
+        }
       }
     }
   },
@@ -1396,6 +1406,11 @@
       "sha512": ""
     },
     "VehiclePriceCalculator.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehiclePriceCalculator.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

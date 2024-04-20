@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,6 +6,25 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Mapper\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="Interfaces\**" />
+    <Content Remove="Mapper\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Mapper\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Mapper\**" />
+    <None Remove="Models\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
@@ -16,6 +35,7 @@
   <ItemGroup>
     <ProjectReference Include="..\VehiclePriceCalculator.Application\VehiclePriceCalculator.Application.csproj" />
     <ProjectReference Include="..\VehiclePriceCalculator.Infrastructure\VehiclePriceCalculator.Infrastructure.csproj" />
+    <ProjectReference Include="..\VehiclePriceCalculator.Shared\VehiclePriceCalculator.Shared.csproj" />
   </ItemGroup>
 
 </Project>

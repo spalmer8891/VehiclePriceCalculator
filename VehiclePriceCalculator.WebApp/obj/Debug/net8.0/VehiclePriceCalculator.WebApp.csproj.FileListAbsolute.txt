@@ -232,3 +232,5 @@ C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Sinks.Async.dll
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\Serilog.Sinks.RollingFile.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\VehiclePriceCalculator.Shared.dll
+C:\Users\Wayne\source\repos\VehiclePriceCalulator\VehiclePriceCalculator.WebApp\bin\Debug\net8.0\VehiclePriceCalculator.Shared.pdb

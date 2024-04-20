@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using VehiclePriceCalculator.API.AutoMapperProfile;
-using VehiclePriceCalculator.API.Interfaces;
-using VehiclePriceCalculator.API.Services;
+using VehiclePriceCalculator.Shared.AutoMapperProfile;
+using VehiclePriceCalculator.Shared.Interfaces;
+using VehiclePriceCalculator.Shared.Services;
 using VehiclePriceCalculator.Application.AutoMapperProfile;
 using VehiclePriceCalculator.Application.CQRS.Queries;
 using VehiclePriceCalculator.Application.Interfaces;
@@ -14,6 +14,7 @@ using VehiclePriceCalculator.Infrastructure.Data;
 using VehiclePriceCalculator.Infrastructure.Interfaces;
 using VehiclePriceCalculator.Infrastructure.Repository;
 using VehiclePriceCalculator.Infrastructure.UnitOfWork;
+using VehiclePriceCalculator.Infrastructure.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,11 +50,14 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Add Presentation Layer
-builder.Services.AddScoped<IAPIService, APIService>();
-builder.Services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(APIMappingProfile));
+builder.Services.AddScoped<IPresentationService, PresentationService>();
+builder.Services.AddAutoMapper(typeof(ApplicationMappingProfile), typeof(PresentationMappingProfile));
 
 // Add MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetAllVehicleTypesQuery>());
+
+//Logger
+builder.Services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 
 var app = builder.Build();
 
