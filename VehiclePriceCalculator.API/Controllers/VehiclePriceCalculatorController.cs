@@ -15,7 +15,7 @@ namespace VehiclePriceCalculator.API.Controllers
         public VehiclePriceCalculatorController(IPresentationService presentationService, ILogger<VehiclePriceCalculatorController> logger)
         {
             _presentationService = presentationService ?? throw new ArgumentNullException(nameof(presentationService));
-            _logger = logger;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         [HttpGet("vehicleTypes")]
