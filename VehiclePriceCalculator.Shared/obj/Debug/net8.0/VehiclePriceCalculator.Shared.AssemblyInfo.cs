@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VehiclePriceCalculator.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+889c23f52609775e01bdc8cbc57940846cd6d66b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb3971b0c501d98214419b266d012b21137a47e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("VehiclePriceCalculator.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VehiclePriceCalculator.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
