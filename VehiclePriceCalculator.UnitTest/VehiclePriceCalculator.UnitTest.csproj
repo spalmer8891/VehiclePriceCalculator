@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\VehiclePriceCalculator.Application\VehiclePriceCalculator.Application.csproj" />
     <ProjectReference Include="..\VehiclePriceCalculator.Infrastructure\VehiclePriceCalculator.Infrastructure.csproj" />
+    <ProjectReference Include="..\VehiclePriceCalculator.Shared\VehiclePriceCalculator.Shared.csproj" />
   </ItemGroup>
 
 </Project>

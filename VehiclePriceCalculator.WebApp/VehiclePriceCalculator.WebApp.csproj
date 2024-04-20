@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Mapper\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="ViewModels\**" />
+    <Content Remove="Interfaces\**" />
+    <Content Remove="Mapper\**" />
+    <Content Remove="Services\**" />
+    <Content Remove="ViewModels\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Mapper\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Mapper\**" />
+    <None Remove="Services\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
@@ -19,6 +38,7 @@
   <ItemGroup>
     <ProjectReference Include="..\VehiclePriceCalculator.Application\VehiclePriceCalculator.Application.csproj" />
     <ProjectReference Include="..\VehiclePriceCalculator.Infrastructure\VehiclePriceCalculator.Infrastructure.csproj" />
+    <ProjectReference Include="..\VehiclePriceCalculator.Shared\VehiclePriceCalculator.Shared.csproj" />
   </ItemGroup>
 
 </Project>
