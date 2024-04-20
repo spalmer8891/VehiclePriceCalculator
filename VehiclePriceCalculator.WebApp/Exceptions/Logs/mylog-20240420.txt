@@ -205,3 +205,27 @@ FROM [VehicleType] AS [v]" (0723d8ff)
 2024-04-20T10:14:58.2248497-04:00 0HN318GLE8TTD:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
 ""SELECT [v].[Id], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[VehicleTypeName]
 FROM [VehicleType] AS [v]" (0723d8ff)
+2024-04-20T10:37:10.9485638-04:00  [INF] Executed DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[VehicleTypeName]
+FROM [VehicleType] AS [v]" (0723d8ff)
+2024-04-20T10:37:10.9483749-04:00  [INF] Executed DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[VehicleTypeName]
+FROM [VehicleType] AS [v]" (0723d8ff)
+2024-04-20T10:37:10.9394184-04:00  [INF] Executed DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[VehicleTypeName]
+FROM [VehicleType] AS [v]" (0723d8ff)
+2024-04-20T10:37:10.9479795-04:00  [INF] Executed DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[VehicleTypeName]
+FROM [VehicleType] AS [v]" (0723d8ff)
+2024-04-20T10:37:11.1620700-04:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[AssociationFee], [v].[BasicFee], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[SpecialFee], [v].[StorageFee], [v].[TotalCost], [v].[VehiclePrice], [v].[VehicleTypeId]
+FROM [VehiclePriceTransaction] AS [v]" (0723d8ff)
+2024-04-20T10:37:11.1621608-04:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[AssociationFee], [v].[BasicFee], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[SpecialFee], [v].[StorageFee], [v].[TotalCost], [v].[VehiclePrice], [v].[VehicleTypeId]
+FROM [VehiclePriceTransaction] AS [v]" (0723d8ff)
+2024-04-20T10:37:11.1622029-04:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[AssociationFee], [v].[BasicFee], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[SpecialFee], [v].[StorageFee], [v].[TotalCost], [v].[VehiclePrice], [v].[VehicleTypeId]
+FROM [VehiclePriceTransaction] AS [v]" (0723d8ff)
+2024-04-20T10:37:11.1623289-04:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [v].[Id], [v].[AssociationFee], [v].[BasicFee], [v].[CreatedBy], [v].[DateCreated], [v].[DateModified], [v].[ModifiedBy], [v].[SpecialFee], [v].[StorageFee], [v].[TotalCost], [v].[VehiclePrice], [v].[VehicleTypeId]
+FROM [VehiclePriceTransaction] AS [v]" (0723d8ff)
