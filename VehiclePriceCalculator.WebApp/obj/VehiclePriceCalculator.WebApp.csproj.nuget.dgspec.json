@@ -1,0 +1,375 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.WebApp\\VehiclePriceCalculator.WebApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj",
+        "projectName": "VehiclePriceCalculator.Application",
+        "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj",
+        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj",
+        "projectName": "VehiclePriceCalculator.Domain",
+        "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj",
+        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj",
+        "projectName": "VehiclePriceCalculator.Infrastructure",
+        "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Domain\\VehiclePriceCalculator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj",
+        "projectName": "VehiclePriceCalculator.Shared",
+        "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj",
+        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj"
+              },
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.WebApp\\VehiclePriceCalculator.WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.WebApp\\VehiclePriceCalculator.WebApp.csproj",
+        "projectName": "VehiclePriceCalculator.WebApp",
+        "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.WebApp\\VehiclePriceCalculator.WebApp.csproj",
+        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Application\\VehiclePriceCalculator.Application.csproj"
+              },
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Infrastructure\\VehiclePriceCalculator.Infrastructure.csproj"
+              },
+              "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj": {
+                "projectPath": "C:\\Users\\Wayne\\source\\repos\\VehiclePriceCalulator\\VehiclePriceCalculator.Shared\\VehiclePriceCalculator.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

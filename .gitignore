@@ -2,5 +2,9 @@
 /.vs/
 /bin/
 /obj/
+/Exceptions/
+bin/*
+obj/*
+Exceptions/*
 *.suo
 *.user
