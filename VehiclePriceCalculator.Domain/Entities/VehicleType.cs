@@ -26,9 +26,5 @@ namespace VehiclePriceCalculator.Domain.Entities
         public string? ModifiedBy { get; set; }
         public virtual VehiclePriceTransaction VehicleTransaction { get; set; }
 
-        //public VehicleType( VehiclePriceTransaction vehiclePriceTransaction)
-        //{
-        //    VehicleTransaction = vehiclePriceTransaction;
-        //}
     }
 }

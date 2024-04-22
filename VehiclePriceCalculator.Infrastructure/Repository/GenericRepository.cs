@@ -22,6 +22,8 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _db = _dbContext.Set<T>();
+            var entities = dbContext.Set<T>().ToList();
+            entities.ForEach(entity => dbContext.Entry(entity).Reload()); //reload to work with fresh db context data
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 

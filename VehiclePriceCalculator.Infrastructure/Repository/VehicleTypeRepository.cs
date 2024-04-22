@@ -25,6 +25,7 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
         public async Task<IEnumerable<VehicleType>> GetVehicleTypeListAsync()
         {
             var data = await _unitOfWork.VehicleTypeRepository.GetAllAsync();
+           
             return data;
         }
 

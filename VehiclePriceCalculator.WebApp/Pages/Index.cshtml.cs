@@ -68,6 +68,7 @@ namespace VehiclePriceCalculator.WebApp.Pages
                 var vehicleTypeList = await _presentationService.GetAllVehicleTypes();
                 var vehicleTypeSelectList = vehicleTypeList.ToDictionary(x => x.Id, x => x.VehicleTypeName).OrderBy(x => x.Value);
                 VehicleTypeList = vehicleTypeSelectList; //add vehicle types to select dropDownList
+                BasePrice = 0; //clear base price field
 
             }catch(Exception ex)
             {

@@ -8,8 +8,6 @@
     <h1 class="display-4"> <strong>Vehicle Price Calculator</strong></h1>
 
 </div>
-<!-- Include DataTables CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 
 <div class="row g-3 vstack gap-3 mt-5">
     <form method="post">
@@ -17,7 +15,7 @@
             <div>  <label for="basePrice"><strong>Vehicle Base Price:</strong></label></div>
             <div class="col-3">
 
-                <input type="number" id="basePrice" asp-for="BasePrice" step="0.01">
+                <input type="number" id="basePrice" asp-for="BasePrice" value="BasePrice">
             </div>
         </div>
 
@@ -62,13 +60,13 @@
                 @foreach (var item in Model.VehiclePriceTransactionList)
                 {
                     <tr id="@item.Id">
-                        <td>@item.VehiclePrice</td>
+                        <td>@item.VehiclePrice.ToString("0.00")</td>
                         <td> @item.VehicleTypeName</td>
-                        <td> @item.BasicFee</td>
-                        <td> @item.SpecialFee</td>
-                        <td> @item.AssociationFee</td>
-                        <td> @item.StorageFee</td>
-                        <td> @item.TotalCost</td>
+                        <td> @item.BasicFee.ToString("0.00")</td>
+                        <td> @item.SpecialFee.ToString("0.00")</td>
+                        <td> @item.AssociationFee.ToString("0.00")</td>
+                        <td> @item.StorageFee.ToString("0.00")</td>
+                        <td> @item.TotalCost.ToString("0.00")</td>
                     </tr>
                 }
 
