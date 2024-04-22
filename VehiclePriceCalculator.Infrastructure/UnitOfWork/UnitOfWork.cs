@@ -16,9 +16,6 @@ namespace VehiclePriceCalculator.Infrastructure.UnitOfWork
     {
 
         private readonly VehiclePriceCalculatorDbContext _context;
-
-        private IGenericRepository<VehicleType> _VehicleTypeRepository;
-        private IGenericRepository<VehiclePriceTransaction> _VehiclePriceTransactionRepository;
         private IAppLogger<VehicleType> _vehicleTypeLogger;
         private IAppLogger<VehiclePriceTransaction> _vehiclePriceTransactionLogger;
 
@@ -28,9 +25,6 @@ namespace VehiclePriceCalculator.Infrastructure.UnitOfWork
             _vehicleTypeLogger = vehicleTypeLogger ?? throw new ArgumentNullException(nameof(vehicleTypeLogger));
             _vehiclePriceTransactionLogger = vehiclePriceTransactionLogger ?? throw new ArgumentNullException(nameof(vehiclePriceTransactionLogger));
         }
-
-        public IGenericRepository<VehicleType> VehicleTypeRepository => _VehicleTypeRepository ??= new GenericRepository<VehicleType>(_context, _vehicleTypeLogger);
-        public IGenericRepository<VehiclePriceTransaction> VehiclePriceTransactionRepository => _VehiclePriceTransactionRepository ??= new GenericRepository<VehiclePriceTransaction>(_context, _vehiclePriceTransactionLogger);
 
         public void Dispose()
         {

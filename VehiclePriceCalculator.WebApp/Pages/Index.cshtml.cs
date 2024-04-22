@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Reflection.Metadata.Ecma335;
 using VehiclePriceCalculator.Shared.Interfaces;
 using VehiclePriceCalculator.Shared.Models;
-using VehiclePriceCalculator.Shared.Interfaces;
 
 namespace VehiclePriceCalculator.WebApp.Pages
 {
