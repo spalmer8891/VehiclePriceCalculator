@@ -8,6 +8,7 @@ using VehiclePriceCalculator.Domain.Entities;
 using VehiclePriceCalculator.Infrastructure.Interfaces;
 using VehiclePriceCalculator.Domain.Interfaces.Repositories;
 using VehiclePriceCalculator.Domain.Interfaces;
+using VehiclePriceCalculator.Infrastructure.UnitOfWork;
 
 namespace VehiclePriceCalculator.Infrastructure.Repository
 {
@@ -17,14 +18,16 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
         private readonly DbContext _dbContext;
         private readonly DbSet<T> _db;
         protected readonly IAppLogger<T> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public GenericRepository(DbContext dbContext,IAppLogger<T> logger)
+        public GenericRepository(DbContext dbContext,IAppLogger<T> logger, IUnitOfWork unitOfWork)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _db = _dbContext.Set<T>();
             var entities = dbContext.Set<T>().ToList();
             entities.ForEach(entity => dbContext.Entry(entity).Reload()); //reload to work with fresh db context data
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _unitOfWork=unitOfWork;
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
@@ -48,6 +51,7 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
             try
             {
                 _dbContext.Set<T>().Add(entity);
+                _unitOfWork.Save(); //save record to database
             }
             catch(Exception ex)
             {

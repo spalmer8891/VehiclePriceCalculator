@@ -15,16 +15,16 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
 {
     public class VehicleTypeRepository : GenericRepository<VehicleType>, IVehicleTypeRepository
     {
-        private readonly IUnitOfWork _unitOfWork;
+ 
         private readonly IAppLogger<VehicleType> _logger;
-        public VehicleTypeRepository(VehiclePriceCalculatorDbContext dbContext,IUnitOfWork unitOfWork, IAppLogger<VehicleType> logger) : base(dbContext,logger)
+        public VehicleTypeRepository(VehiclePriceCalculatorDbContext dbContext, IAppLogger<VehicleType> logger,IUnitOfWork unitOfWork) : base(dbContext,logger,unitOfWork)
         {
-            _unitOfWork = unitOfWork;
+
         }
 
         public async Task<IEnumerable<VehicleType>> GetVehicleTypeListAsync()
         {
-            var data = await _unitOfWork.VehicleTypeRepository.GetAllAsync();
+            var data = await GetAllAsync();
            
             return data;
         }

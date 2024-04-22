@@ -19,19 +19,17 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
     public class VehiclePriceTransactionRepository : GenericRepository<VehiclePriceTransaction>, IVehiclePriceTransactionRepository
     {
 
-        private readonly IUnitOfWork _unitOfWork;
         private readonly IAppLogger<VehiclePriceTransaction> _logger;
+        private readonly IUnitOfWork unitOfWork;
         
-        public VehiclePriceTransactionRepository(VehiclePriceCalculatorDbContext dbContext,IUnitOfWork unitOfWork, IAppLogger<VehiclePriceTransaction> logger) : base(dbContext,logger)
+        public VehiclePriceTransactionRepository(VehiclePriceCalculatorDbContext dbContext,IAppLogger<VehiclePriceTransaction> logger, IUnitOfWork unitOfWork) : base(dbContext,logger,unitOfWork)
         {
-            _unitOfWork = unitOfWork;
            
         }
 
         public async Task<IEnumerable<VehiclePriceTransaction>> GetVehiclePriceTransactionListAsync()
         {
-            var data = await _unitOfWork.VehiclePriceTransactionRepository.GetAllAsync();
-            
+            var data = await GetAllAsync();
             return data;
         }
 
@@ -40,8 +38,8 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
             VehiclePriceTransaction response = new VehiclePriceTransaction();
             try
             {
-                response = await _unitOfWork.VehiclePriceTransactionRepository.AddAsync(vehiclePriceTransaction);
-                _unitOfWork.Save(); //save record to database
+                response = await AddAsync(vehiclePriceTransaction);
+               
             }
             catch(Exception ex)
             {
