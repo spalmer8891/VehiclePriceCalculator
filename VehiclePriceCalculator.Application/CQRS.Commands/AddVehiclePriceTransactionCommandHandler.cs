@@ -38,9 +38,10 @@ namespace VehiclePriceCalculator.Application.CQRS.Commands
                 ModifiedBy = "System"
             };
 
-            var response = await _vehiclePriceTransactionRepository.AddVehiclePriceTransactionListAsync(vehiclePriceTransaction);
+            //var response = await _vehiclePriceTransactionRepository.AddVehiclePriceTransactionListAsync(vehiclePriceTransaction);
+           
+            var response = await _unitOfWork.VehiclePriceTransactionRepository.AddVehiclePriceTransactionListAsync(vehiclePriceTransaction);
             await _unitOfWork.SaveAsync();
-
 
             return response;
         }

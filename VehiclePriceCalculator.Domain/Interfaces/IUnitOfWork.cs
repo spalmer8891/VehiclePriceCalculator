@@ -10,6 +10,10 @@ namespace VehiclePriceCalculator.Domain.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
+        //IGenericRepository<VehicleType> VehicleTypeRepository { get; }
+        //IGenericRepository<VehiclePriceTransaction> VehiclePriceTransactionRepository { get; }
+        IVehicleTypeRepository VehicleTypeRepository { get; }
+        IVehiclePriceTransactionRepository VehiclePriceTransactionRepository { get; }
         void Save();
         Task SaveAsync();
     }
