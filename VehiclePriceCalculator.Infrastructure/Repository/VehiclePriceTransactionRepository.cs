@@ -10,8 +10,6 @@ using VehiclePriceCalculator.Domain.Entities;
 using VehiclePriceCalculator.Domain.Interfaces;
 using VehiclePriceCalculator.Domain.Interfaces.Repositories;
 using VehiclePriceCalculator.Infrastructure.Data;
-using VehiclePriceCalculator.Infrastructure.Interfaces;
-using VehiclePriceCalculator.Infrastructure.UnitOfWork;
 
 
 namespace VehiclePriceCalculator.Infrastructure.Repository
@@ -20,9 +18,8 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
     {
 
         private readonly IAppLogger<VehiclePriceTransaction> _logger;
-        private readonly IUnitOfWork unitOfWork;
         
-        public VehiclePriceTransactionRepository(VehiclePriceCalculatorDbContext dbContext,IAppLogger<VehiclePriceTransaction> logger, IUnitOfWork unitOfWork) : base(dbContext,logger,unitOfWork)
+        public VehiclePriceTransactionRepository(VehiclePriceCalculatorDbContext dbContext,IAppLogger<VehiclePriceTransaction> logger) : base(dbContext,logger)
         {
            
         }
