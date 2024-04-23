@@ -11,7 +11,6 @@ using VehiclePriceCalculator.Domain.Interfaces;
 using VehiclePriceCalculator.Domain.Interfaces.Repositories;
 using VehiclePriceCalculator.Domain.Services;
 using VehiclePriceCalculator.Infrastructure.Data;
-using VehiclePriceCalculator.Infrastructure.Interfaces;
 using VehiclePriceCalculator.Infrastructure.Repository;
 using VehiclePriceCalculator.Infrastructure.UnitOfWork;
 using VehiclePriceCalculator.Infrastructure.Logging;

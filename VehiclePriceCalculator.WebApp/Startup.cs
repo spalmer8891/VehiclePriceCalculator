@@ -7,7 +7,6 @@ using AutoMapper;
 using VehiclePriceCalculator.Application.AutoMapperProfile;
 using VehiclePriceCalculator.Domain.Interfaces.Repositories;
 using VehiclePriceCalculator.Infrastructure.Repository;
-using VehiclePriceCalculator.Infrastructure.Interfaces;
 using VehiclePriceCalculator.Infrastructure.UnitOfWork;
 using VehiclePriceCalculator.Domain.Entities;
 using VehiclePriceCalculator.Application.Interfaces;

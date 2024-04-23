@@ -17,12 +17,14 @@ namespace VehiclePriceCalculator.Application.CQRS.Queries
         private readonly IVehicleTypeRepository _vehicleTypeRepository;
         private readonly IMapper _mapper;
         private readonly IAppLogger<GetAllVehicleTypesQueryHandler> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public GetAllVehicleTypesQueryHandler(IVehicleTypeRepository vehicleTypeRepository, IMapper mapper, IAppLogger<GetAllVehicleTypesQueryHandler> logger)
+        public GetAllVehicleTypesQueryHandler(IVehicleTypeRepository vehicleTypeRepository, IMapper mapper, IAppLogger<GetAllVehicleTypesQueryHandler> logger, IUnitOfWork unitOfWork)
         {
             _vehicleTypeRepository = vehicleTypeRepository  ?? throw new ArgumentNullException(nameof(vehicleTypeRepository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
 
         }
 
@@ -32,7 +34,8 @@ namespace VehiclePriceCalculator.Application.CQRS.Queries
             IEnumerable<VehicleTypeModel> mapped = Enumerable.Empty<VehicleTypeModel>();
 
             try {
-                vehicleTypesList = await _vehicleTypeRepository.GetVehicleTypeListAsync();
+                vehicleTypesList = await _unitOfWork.VehicleTypeRepository.GetVehicleTypeListAsync();
+                //vehicleTypesList = await _vehicleTypeRepository.GetVehicleTypeListAsync();
                 mapped = _mapper.Map<IEnumerable<VehicleTypeModel>>(vehicleTypesList);
             }
             catch(Exception ex)

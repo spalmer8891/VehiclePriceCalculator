@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VehiclePriceCalculator.Domain.Entities;
+using VehiclePriceCalculator.Domain.Interfaces;
 
 namespace VehiclePriceCalculator.Infrastructure.Data
 {

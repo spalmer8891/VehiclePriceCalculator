@@ -7,7 +7,7 @@ using VehiclePriceCalculator.Domain.Entities;
 
 namespace VehiclePriceCalculator.Domain.Interfaces.Repositories
 {
-    public interface IVehiclePriceTransactionRepository 
+    public interface IVehiclePriceTransactionRepository
     {
         Task<IEnumerable<VehiclePriceTransaction>> GetVehiclePriceTransactionListAsync();
 
