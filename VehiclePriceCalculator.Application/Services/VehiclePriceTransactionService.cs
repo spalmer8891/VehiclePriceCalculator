@@ -46,7 +46,7 @@ namespace VehiclePriceCalculator.Application.Services
         {
             var vehiclePriceTransactionObj = new AddVehiclePriceTransactionCommand
             {
-                VehicleTypeId = vehiclePriceTransaction.VehicleTypeId ?? 0,
+                VehicleTypeId = vehiclePriceTransaction.VehicleTypeId,
                 VehiclePrice = vehiclePriceTransaction.VehiclePrice ?? 0,
                 BasicFee = vehiclePriceTransaction.BasicFee ?? 0,
                 SpecialFee = vehiclePriceTransaction.SpecialFee ?? 0,
@@ -60,15 +60,10 @@ namespace VehiclePriceCalculator.Application.Services
             return mediatrResponse;
         }
 
-        public async Task<VehiclePriceTransactionModel> CalculateVehiclePrice(decimal basePrice, Domain.Enum.VehicleType vehicleType, decimal storageFee)
+        public async Task<VehiclePriceTransactionModel> CalculateVehiclePrice(VehicleCalculateModel model)
         {
-            var vehicle = new Vehicle
-            {
-                BasePrice = basePrice,
-                Type = vehicleType,
-                StorageFee = storageFee
-            };
-            var vehiclePriceTransaction =  _calculateVehiclePrice.CalculateTotalCost(vehicle,vehicleType);
+
+            var vehiclePriceTransaction =  _calculateVehiclePrice.CalculateTotalCost(model);
             var mapped = _mapper.Map<VehiclePriceTransactionModel>(vehiclePriceTransaction);
             return mapped;
         }

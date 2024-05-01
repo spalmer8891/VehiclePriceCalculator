@@ -42,7 +42,7 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
                     AssociationFee = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     StorageFee = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     TotalCost = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    VehicleTypeId = table.Column<int>(type: "int", nullable: true),
+                    VehicleTypeId = table.Column<int>(type: "int", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     DateModified = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -55,7 +55,8 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
                         name: "FK_VehiclePriceTransaction_VehicleType_VehicleTypeId",
                         column: x => x.VehicleTypeId,
                         principalTable: "VehicleType",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
@@ -63,8 +64,8 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "DateModified", "ModifiedBy", "VehicleTypeName" },
                 values: new object[,]
                 {
-                    { 1, "System", new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9335), new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9401), "System", "Common" },
-                    { 2, "System", new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9418), new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9431), "System", "Luxury" }
+                    { 1, "System", new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4358), new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4406), "System", "Common" },
+                    { 2, "System", new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4412), new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4415), "System", "Luxury" }
                 });
 
             migrationBuilder.CreateIndex(

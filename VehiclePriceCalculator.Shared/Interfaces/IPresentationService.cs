@@ -1,4 +1,5 @@
-﻿using VehiclePriceCalculator.Shared.Models;
+﻿using VehiclePriceCalculator.Domain.Model;
+using VehiclePriceCalculator.Shared.Models;
 
 namespace VehiclePriceCalculator.Shared.Interfaces
 {
@@ -6,6 +7,6 @@ namespace VehiclePriceCalculator.Shared.Interfaces
     {
         Task<IEnumerable<VehicleTypeViewModel>> GetAllVehicleTypes();
         Task<IEnumerable<VehiclePriceTransactionViewModel>> GetAllVehiclePriceTransactions();
-        Task<VehiclePriceTransactionViewModel> AddVehiclePriceTransactions(decimal basePrice, string vehicleType);
+        Task<VehiclePriceTransactionViewModel> AddVehiclePriceTransactions(VehicleCalculateModel vehicleCalculate);
     }
 }

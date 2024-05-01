@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.VisualBasic;
 using System.Reflection.Metadata.Ecma335;
+using VehiclePriceCalculator.Domain.Model;
+using VehiclePriceCalculator.Infrastructure.Constants;
 using VehiclePriceCalculator.Shared.Interfaces;
 using VehiclePriceCalculator.Shared.Models;
 
@@ -11,7 +14,7 @@ namespace VehiclePriceCalculator.WebApp.Pages
         [BindProperty]
         public decimal BasePrice { get; set; } //Bind Property to front end
         [BindProperty]
-        public string VehicleType { get; set; } //Bind Property to front end
+        public int VehicleType { get; set; } //Bind Property to front end
         public IOrderedEnumerable<KeyValuePair<int, string>> VehicleTypeList { get; set; }
         public IEnumerable<VehiclePriceTransactionViewModel> VehiclePriceTransactionList { get; set; }
         private readonly ILogger<IndexModel> _logger;
@@ -53,7 +56,15 @@ namespace VehiclePriceCalculator.WebApp.Pages
             {
                 var basePrice = BasePrice; //data from front end
                 var vehicleType = VehicleType; //data from front end
-                var vehiclePriceTransactionSingle = await _presentationService.AddVehiclePriceTransactions(basePrice, vehicleType); //call service to add vehicle price transaction
+
+                var model = new VehicleCalculateModel
+                {
+                    BasePrice = BasePrice,
+                    VehicleType = (Domain.Enum.VehicleType)VehicleType,
+                    StorageFee = VehiclePriceConstants.StorageFee
+                };
+
+                var vehiclePriceTransactionSingle = await _presentationService.AddVehiclePriceTransactions(model); //call service to add vehicle price transaction
 
                 var vehiclePriceTransactionList = await _presentationService.GetAllVehiclePriceTransactions();
 

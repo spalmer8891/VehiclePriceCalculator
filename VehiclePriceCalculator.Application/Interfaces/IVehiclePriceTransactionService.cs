@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using VehiclePriceCalculator.Application.Models;
 using VehiclePriceCalculator.Domain.Entities;
 using VehiclePriceCalculator.Domain.Enum;
+using VehiclePriceCalculator.Domain.Model;
 
 namespace VehiclePriceCalculator.Application.Interfaces
 {
@@ -13,6 +14,6 @@ namespace VehiclePriceCalculator.Application.Interfaces
     {
         Task<IEnumerable<VehiclePriceTransactionModel>> GetVehiclePriceTransactionList();
         Task<VehiclePriceTransactionModel> AddVehiclePriceTransactionList(VehiclePriceTransaction vehiclePriceTransaction);
-        Task<VehiclePriceTransactionModel> CalculateVehiclePrice(decimal baseFee, Domain.Enum.VehicleType vehicleType, decimal storageFee);
+        Task<VehiclePriceTransactionModel> CalculateVehiclePrice(VehicleCalculateModel model);
     }
 }

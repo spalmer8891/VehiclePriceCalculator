@@ -24,7 +24,7 @@ namespace VehiclePriceCalculator.Domain.Entities
         public DateTime? DateModified { get; set; }  
         [MaxLength(50)]
         public string? ModifiedBy { get; set; }
-        public virtual VehiclePriceTransaction VehicleTransaction { get; set; }
+        public virtual ICollection<VehiclePriceTransaction> VehiclePriceTransaction { get; set; }
 
     }
 }

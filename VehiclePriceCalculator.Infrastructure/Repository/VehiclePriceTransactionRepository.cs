@@ -30,12 +30,12 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
             return data;
         }
 
-        public async Task<VehiclePriceTransaction> AddVehiclePriceTransactionListAsync(VehiclePriceTransaction vehiclePriceTransaction)
+        public VehiclePriceTransaction AddVehiclePriceTransactionListAsync(VehiclePriceTransaction vehiclePriceTransaction)
         {
             VehiclePriceTransaction response = new VehiclePriceTransaction();
             try
             {
-                response = await AddAsync(vehiclePriceTransaction);
+                response =  AddAsync(vehiclePriceTransaction);
                
             }
             catch(Exception ex)

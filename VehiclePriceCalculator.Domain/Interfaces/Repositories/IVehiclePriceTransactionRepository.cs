@@ -11,6 +11,6 @@ namespace VehiclePriceCalculator.Domain.Interfaces.Repositories
     {
         Task<IEnumerable<VehiclePriceTransaction>> GetVehiclePriceTransactionListAsync();
 
-        Task<VehiclePriceTransaction> AddVehiclePriceTransactionListAsync(VehiclePriceTransaction vehiclePriceTransaction);
+        VehiclePriceTransaction AddVehiclePriceTransactionListAsync(VehiclePriceTransaction vehiclePriceTransaction);
     }
 }

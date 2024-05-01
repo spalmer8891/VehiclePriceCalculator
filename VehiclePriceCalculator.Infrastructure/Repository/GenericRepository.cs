@@ -22,8 +22,6 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _db = _dbContext.Set<T>();
-            var entities = dbContext.Set<T>().ToList();
-            entities.ForEach(entity => dbContext.Entry(entity).Reload()); //reload to work with fresh db context data
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -43,11 +41,11 @@ namespace VehiclePriceCalculator.Infrastructure.Repository
             return data;
         }
 
-        public async Task<T> AddAsync(T entity)
+        public T AddAsync(T entity)
         {
             try
             {
-                _dbContext.Set<T>().Add(entity);
+                _db.Add(entity);
             }
             catch(Exception ex)
             {
