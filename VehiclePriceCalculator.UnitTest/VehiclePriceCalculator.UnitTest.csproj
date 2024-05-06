@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="xunit" Version="2.4.2" />
@@ -27,6 +28,7 @@
     <ProjectReference Include="..\VehiclePriceCalculator.Application\VehiclePriceCalculator.Application.csproj" />
     <ProjectReference Include="..\VehiclePriceCalculator.Infrastructure\VehiclePriceCalculator.Infrastructure.csproj" />
     <ProjectReference Include="..\VehiclePriceCalculator.Shared\VehiclePriceCalculator.Shared.csproj" />
+    <ProjectReference Include="..\VehiclePriceCalculator.WebApp\VehiclePriceCalculator.WebApp.csproj" />
   </ItemGroup>
 
 </Project>
