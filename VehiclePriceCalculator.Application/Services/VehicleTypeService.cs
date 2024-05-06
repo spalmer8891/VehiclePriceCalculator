@@ -9,7 +9,6 @@ using VehiclePriceCalculator.Application.CQRS.Queries;
 using VehiclePriceCalculator.Application.Interfaces;
 using VehiclePriceCalculator.Application.Models;
 using VehiclePriceCalculator.Domain.Interfaces;
-using VehiclePriceCalculator.Domain.Interfaces.Repositories;
 
 namespace VehiclePriceCalculator.Application.Services
 {

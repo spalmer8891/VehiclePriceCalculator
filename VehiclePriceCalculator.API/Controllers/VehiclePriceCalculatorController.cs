@@ -1,12 +1,14 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using VehiclePriceCalculator.Domain.Model;
 using VehiclePriceCalculator.Shared.Interfaces;
 using VehiclePriceCalculator.Shared.Services;
 
 namespace VehiclePriceCalculator.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
+    //[Route("[controller]")]
     public class VehiclePriceCalculatorController : ControllerBase
     {
         private readonly IPresentationService _presentationService;
@@ -33,10 +35,17 @@ namespace VehiclePriceCalculator.API.Controllers
         }
 
         [HttpPost("addVehiclePriceTransaction")]
-        public async Task<IActionResult> AddVehiclePriceTransactions([FromBody] decimal basePrice, string vehicleType)
+        public async Task<IActionResult> AddVehiclePriceTransactions([FromBody] VehicleCalculateModel model)
         {
-            var vehicleTypeList = await _presentationService.AddVehiclePriceTransactions(basePrice,vehicleType);
+            var vehicleTypeList = await _presentationService.AddVehiclePriceTransactions(model);
             return Ok(vehicleTypeList);
         }
+
+        //[HttpPost("addVehiclePriceTransaction")]
+        //public async Task<IActionResult> AddVehiclePriceTransactions(decimal basePrice, string vehicleType)
+        //{
+        //    var vehicleTypeList =  await _presentationService.AddVehiclePriceTransactions(basePrice,vehicleType);
+        //    return Ok(vehicleTypeList);
+        //}
     }
 }

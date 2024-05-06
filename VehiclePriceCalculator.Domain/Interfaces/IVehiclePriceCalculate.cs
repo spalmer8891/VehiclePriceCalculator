@@ -11,6 +11,9 @@ namespace VehiclePriceCalculator.Domain.Interfaces
 {
     public interface IVehiclePriceCalculate
     {
-        public VehiclePriceTransaction CalculateTotalCost(Vehicle vehicle, Enum.VehicleType vehicleType);
+        public decimal CalculateBasicFee(decimal basePrice, Enum.VehicleType vehicleType);
+        public decimal CalculateSpecialFee(decimal basePrice, Enum.VehicleType vehicleType);
+        public decimal CalculateAssociationFee(decimal basePrice);
+        public VehiclePriceTransaction CalculateTotalCost(VehicleCalculateModel model);
     }
 }

@@ -5,6 +5,7 @@ using VehiclePriceCalculator.Shared.Interfaces;
 using VehiclePriceCalculator.Shared.Models;
 using VehiclePriceCalculator.Infrastructure.Constants;
 using VehiclePriceCalculator.Domain.Entities;
+using VehiclePriceCalculator.Domain.Model;
 
 
 namespace VehiclePriceCalculator.Shared.Services
@@ -35,9 +36,9 @@ namespace VehiclePriceCalculator.Shared.Services
             return mapped;
         }
 
-        public async Task<VehiclePriceTransactionViewModel> AddVehiclePriceTransactions(decimal basePrice, string vehicleType)
+        public async Task<VehiclePriceTransactionViewModel> AddVehiclePriceTransactions(VehicleCalculateModel model)
         {
-            var response =  await _vehiclePriceTransactionApiService.CalculateVehiclePrice(basePrice, (Domain.Enum.VehicleType)Enum.Parse(typeof(Domain.Enum.VehicleType), vehicleType), VehiclePriceConstants.StorageFee);
+            var response =  await _vehiclePriceTransactionApiService.CalculateVehiclePrice(model);
             var mapped = _mapper.Map<VehiclePriceTransaction>(response);
             var data = await _vehiclePriceTransactionApiService.AddVehiclePriceTransactionList(mapped);
             var mappedViewModel = _mapper.Map<VehiclePriceTransactionViewModel>(data);

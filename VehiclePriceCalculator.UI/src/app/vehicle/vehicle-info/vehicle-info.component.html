@@ -1,0 +1,59 @@
+<p>vehicle-type works!</p>
+<form novalidate autocomplete="off" #form="ngForm" (submit)="submitForm(form)"> 
+    <div class="row">
+        <div>  <label for="basePrice"><strong>Vehicle Base Price:</strong></label></div>
+        <div class="col-3">
+    
+            <input type="number" id="basePrice" asp-for="BasePrice" value="BasePrice" name="basePrice" [(ngModel)]="basePrice" required>
+        </div>
+    </div>
+    
+    <div class="row mt-3">
+    
+        <div class="col-4">
+            <label for="type"><strong>Vehicle Type:</strong></label>
+            <select id = "vehicleType" class="form-control" name="vehicleType" [(ngModel)]="vehicleType">
+                <option *ngFor="let vehicleType of vehicleTypeList" [value]="vehicleType.id" >{{ vehicleType.vehicleTypeName }}</option>
+              </select>
+              
+        </div>
+    
+    </div>
+
+    <div class="row mt-3">
+        <table id="dataTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th rowspan="2">Vehicle Price</th>
+                    <th rowspan="2">Vehicle Type Name</th>
+                    <th colspan="4" id="feesHeading" style="text-align:center;">Fees ($)</th>
+                    <th rowspan="2">Total Cost</th>
+                </tr>
+                <tr>
+                    <th>Basic Fee</th>
+                    <th>Special Fee</th>
+                    <th>Association Fee</th>
+                    <th>Storage Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr *ngFor="let item of vehiclePriceTransactionDTO" [id]="item.id">
+                    <td>{{ item.vehiclePrice | number: '1.2-2' }}</td>
+                    <td>{{ item.vehicleTypeName }}</td>       
+                    <td>{{ item.basicFee | number: '1.2-2' }}</td>
+                    <td>{{ item.specialFee | number: '1.2-2' }}</td>
+                    <td>{{ item.associationFee | number: '1.2-2' }}</td>
+                    <td>{{ item.storageFee | number: '1.2-2' }}</td>
+                    <td>{{ item.totalCost | number: '1.2-2' }}</td>
+                </tr>
+            
+        
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="mt-3">
+        <button id="btnSubmit" class="btn btn-primary" type="submit"  [disabled]="!form.valid">Calculate Total Cost</button>
+    </div>
+</form>

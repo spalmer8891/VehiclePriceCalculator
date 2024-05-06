@@ -11,6 +11,7 @@ namespace VehiclePriceCalculator.Domain.Entities
     public class VehiclePriceTransaction : Entity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
@@ -26,7 +27,7 @@ namespace VehiclePriceCalculator.Domain.Entities
         [Column(TypeName = "decimal(18,2)")]
         public decimal? TotalCost { get; set; }
         [ForeignKey("VehicleType")]
-        public int? VehicleTypeId { get; set; }
+        public int VehicleTypeId { get; set; }
         [DataType(DataType.Date)]
         public DateTime? DateCreated { get; set; }
         [DataType(DataType.Date)]

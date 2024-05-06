@@ -40,7 +40,7 @@ namespace VehiclePriceCalculator.Application.CQRS.Commands
 
             //var response = await _vehiclePriceTransactionRepository.AddVehiclePriceTransactionListAsync(vehiclePriceTransaction);
            
-            var response = await _unitOfWork.VehiclePriceTransactionRepository.AddVehiclePriceTransactionListAsync(vehiclePriceTransaction);
+            var response =  _unitOfWork.VehiclePriceTransactionRepository.AddVehiclePriceTransactionListAsync(vehiclePriceTransaction);
             await _unitOfWork.SaveAsync();
 
             return response;

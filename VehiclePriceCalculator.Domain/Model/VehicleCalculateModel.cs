@@ -7,11 +7,11 @@ using VehiclePriceCalculator.Domain.Enum;
 
 namespace VehiclePriceCalculator.Domain.Model
 {
-    public class Vehicle
+    public class VehicleCalculateModel
     {
 
         public decimal BasePrice { get; set; }
-        public VehicleType Type { get; set; }
+        public VehicleType VehicleType { get; set; }
         public decimal StorageFee { get; set; }
 
     }

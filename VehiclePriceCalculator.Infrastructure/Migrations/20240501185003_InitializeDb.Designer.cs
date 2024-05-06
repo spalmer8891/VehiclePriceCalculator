@@ -12,7 +12,7 @@ using VehiclePriceCalculator.Infrastructure.Data;
 namespace VehiclePriceCalculator.Infrastructure.Migrations
 {
     [DbContext(typeof(VehiclePriceCalculatorDbContext))]
-    [Migration("20240418234139_InitializeDb")]
+    [Migration("20240501185003_InitializeDb")]
     partial class InitializeDb
     {
         /// <inheritdoc />
@@ -65,7 +65,7 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
                     b.Property<decimal?>("VehiclePrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("VehicleTypeId")
+                    b.Property<int>("VehicleTypeId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -111,8 +111,8 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
                         {
                             Id = 1,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9335),
-                            DateModified = new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9401),
+                            DateCreated = new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4358),
+                            DateModified = new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4406),
                             ModifiedBy = "System",
                             VehicleTypeName = "Common"
                         },
@@ -120,8 +120,8 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
                         {
                             Id = 2,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9418),
-                            DateModified = new DateTime(2024, 4, 18, 19, 41, 38, 356, DateTimeKind.Local).AddTicks(9431),
+                            DateCreated = new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4412),
+                            DateModified = new DateTime(2024, 5, 1, 14, 50, 2, 724, DateTimeKind.Local).AddTicks(4415),
                             ModifiedBy = "System",
                             VehicleTypeName = "Luxury"
                         });
@@ -130,16 +130,17 @@ namespace VehiclePriceCalculator.Infrastructure.Migrations
             modelBuilder.Entity("VehiclePriceCalculator.Domain.Entities.VehiclePriceTransaction", b =>
                 {
                     b.HasOne("VehiclePriceCalculator.Domain.Entities.VehicleType", "VehicleType")
-                        .WithOne("VehicleTransaction")
-                        .HasForeignKey("VehiclePriceCalculator.Domain.Entities.VehiclePriceTransaction", "VehicleTypeId");
+                        .WithMany("VehiclePriceTransaction")
+                        .HasForeignKey("VehicleTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("VehicleType");
                 });
 
             modelBuilder.Entity("VehiclePriceCalculator.Domain.Entities.VehicleType", b =>
                 {
-                    b.Navigation("VehicleTransaction")
-                        .IsRequired();
+                    b.Navigation("VehiclePriceTransaction");
                 });
 #pragma warning restore 612, 618
         }

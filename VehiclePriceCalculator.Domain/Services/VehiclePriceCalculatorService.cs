@@ -63,16 +63,16 @@ namespace VehiclePriceCalculator.Domain.Services
             //    return 20;
         }
 
-        public VehiclePriceTransaction CalculateTotalCost(Vehicle vehicle, Enum.VehicleType vehicleType)
+        public VehiclePriceTransaction CalculateTotalCost(VehicleCalculateModel vehicle)
         {
-            decimal basicFee = CalculateBasicFee(vehicle.BasePrice, vehicleType);
-            decimal specialFee = CalculateSpecialFee(vehicle.BasePrice, vehicle.Type);
+            decimal basicFee = CalculateBasicFee(vehicle.BasePrice, vehicle.VehicleType);
+            decimal specialFee = CalculateSpecialFee(vehicle.BasePrice, vehicle.VehicleType);
             decimal associationFee = CalculateAssociationFee(vehicle.BasePrice);
             decimal storageFee = vehicle.StorageFee; // Fixed storage fee
 
             return new VehiclePriceTransaction
             {
-                VehicleTypeId = (int)vehicle.Type,
+                VehicleTypeId = (int)vehicle.VehicleType,
                 VehiclePrice = vehicle.BasePrice,
                 BasicFee = basicFee,
                 SpecialFee = specialFee,

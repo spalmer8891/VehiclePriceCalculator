@@ -41,4 +41,8 @@
     <ProjectReference Include="..\VehiclePriceCalculator.Shared\VehiclePriceCalculator.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\Logs\" />
+  </ItemGroup>
+
 </Project>
